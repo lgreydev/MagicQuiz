@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="QuizzesWizardingWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wizarding" translatesAutoresizingMaskIntoConstraints="NO" id="TDm-vS-PFZ">
+                                <rect key="frame" x="0.0" y="44" width="428" height="882"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Tek-7F-uEw">
+                                <rect key="frame" x="20" y="260" width="388" height="406.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="QAI-zv-tLq">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="406.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-b3-3EL">
+                                                <rect key="frame" x="0.0" y="0.0" width="388" height="208.33333333333334"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yov-BZ-Hs0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="388" height="126.33333333333333"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="100"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your wizarding knowledge to the test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp8-kl-HLr">
+                                                        <rect key="frame" x="0.0" y="136.33333333333331" width="388" height="72"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-7X-Tvn">
+                                                <rect key="frame" x="0.0" y="358.33333333333337" width="388" height="48"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                <state key="normal" title="New Game">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TDm-vS-PFZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D91-4t-Cjt"/>
+                            <constraint firstAttribute="trailing" secondItem="Tek-7F-uEw" secondAttribute="trailing" constant="20" id="EeW-J8-nDo"/>
+                            <constraint firstItem="TDm-vS-PFZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Klf-IF-5cR"/>
+                            <constraint firstItem="TDm-vS-PFZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OEi-hl-12Z"/>
+                            <constraint firstItem="Tek-7F-uEw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="QbI-Sv-hzH"/>
+                            <constraint firstItem="Tek-7F-uEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RUs-da-R8h"/>
+                            <constraint firstItem="Tek-7F-uEw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ihR-Gs-Ay0"/>
+                            <constraint firstAttribute="bottom" secondItem="TDm-vS-PFZ" secondAttribute="bottom" id="w2D-SU-hcd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.831775700934578" y="71.274298056155516"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wizarding" width="423.66665649414062" height="916.66668701171875"/>
+    </resources>
+</document>
