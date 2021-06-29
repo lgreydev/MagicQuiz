@@ -14,6 +14,7 @@
 		5E839FF4268A1DE800995C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E839FF3268A1DE800995C25 /* Assets.xcassets */; };
 		5E839FF7268A1DE800995C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E839FF5268A1DE800995C25 /* LaunchScreen.storyboard */; };
 		5E83A003268AEBDC00995C25 /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83A002268AEBDC00995C25 /* QuizzesViewController.swift */; };
+		5EAF0B7E268B84FF00D92322 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5E839FF6268A1DE800995C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E839FF8268A1DE800995C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E83A002268AEBDC00995C25 /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
+		5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				5E839FEE268A1DE500995C25 /* WelcomeViewController.swift */,
 				5E83A002268AEBDC00995C25 /* QuizzesViewController.swift */,
+				5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				5E839FEF268A1DE500995C25 /* WelcomeViewController.swift in Sources */,
 				5E839FEB268A1DE500995C25 /* AppDelegate.swift in Sources */,
+				5EAF0B7E268B84FF00D92322 /* LogoViewController.swift in Sources */,
 				5E83A003268AEBDC00995C25 /* QuizzesViewController.swift in Sources */,
 				5E839FED268A1DE500995C25 /* SceneDelegate.swift in Sources */,
 			);

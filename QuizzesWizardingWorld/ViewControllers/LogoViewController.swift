@@ -1,0 +1,55 @@
+//
+//  LogoViewController.swift
+//  QuizzesWizardingWorld
+//
+//  Created by Sergey Lukaschuk on 29.06.2021.
+//
+
+import UIKit
+
+class LogoViewController: UIViewController {
+
+    // MARK: - Private Properties
+    private var imageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        imageView.image = UIImage(named: "logo-icon")
+        return imageView
+    }()
+    
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(imageView)
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.performSegue(withIdentifier: "welcomeVC", sender: nil)
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.center = view.center
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            self.animate()
+        }
+    }
+    
+    
+    // MARK: - Private Methods
+    private func animate() {
+        UIView.animate(withDuration: 2) {
+            let size = self.view.frame.size.width * 2
+            let diffX = size - self.view.frame.width
+            let diffY = self.view.frame.height - size
+
+            self.imageView.frame = CGRect(
+                x: -(diffX/2),
+                y: diffY/2,
+                width: size,
+                height: size)
+            self.imageView.alpha = 0
+            
+        }
+    }
+
+}

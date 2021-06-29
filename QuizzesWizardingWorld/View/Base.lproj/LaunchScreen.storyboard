@@ -15,19 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magic" translatesAutoresizingMaskIntoConstraints="NO" id="sA6-lT-Pm7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Yul-08-7Zd">
                                 <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="hj3-Aa-VxE"/>
-                                    <constraint firstAttribute="width" constant="150" id="wY2-Tc-TV1"/>
+                                    <constraint firstAttribute="width" constant="150" id="6yO-IE-lJW"/>
+                                    <constraint firstAttribute="height" constant="150" id="Zyl-Nz-DZe"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sA6-lT-Pm7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3QM-Mj-ZyL"/>
-                            <constraint firstItem="sA6-lT-Pm7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Nyp-6F-d62"/>
+                            <constraint firstItem="Yul-08-7Zd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fI5-4d-yhM"/>
+                            <constraint firstItem="Yul-08-7Zd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="spD-M6-VLT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magic" width="231" height="231"/>
+        <image name="logo-icon" width="198" height="198"/>
     </resources>
 </document>
