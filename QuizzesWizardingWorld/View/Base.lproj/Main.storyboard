@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,6 +48,9 @@
                                                 <state key="normal" title="New Game">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="6vD-E1-6dC" kind="show" id="U9Q-99-XHB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -71,8 +75,27 @@
             </objects>
             <point key="canvasLocation" x="-23.831775700934578" y="71.274298056155516"/>
         </scene>
+        <!--Quizzes View Controller-->
+        <scene sceneID="WYG-JT-C6u">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="6vD-E1-6dC" customClass="QuizzesViewController" customModule="QuizzesWizardingWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhI-ow-bHV">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xjT-f9-5gw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i9Z-kr-VRF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pN-w2-JTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="74"/>
+        </scene>
     </scenes>
     <resources>
         <image name="wizarding" width="423.66665649414062" height="916.66668701171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
