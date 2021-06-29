@@ -21,7 +21,7 @@ class LogoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
             self.performSegue(withIdentifier: "welcomeVC", sender: nil)
         }
     }
@@ -37,7 +37,7 @@ class LogoViewController: UIViewController {
     
     // MARK: - Private Methods
     private func animate() {
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 1.5) {
             let size = self.view.frame.size.width * 2
             let diffX = size - self.view.frame.width
             let diffY = self.view.frame.height - size
