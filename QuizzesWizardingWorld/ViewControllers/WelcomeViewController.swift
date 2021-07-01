@@ -13,7 +13,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
