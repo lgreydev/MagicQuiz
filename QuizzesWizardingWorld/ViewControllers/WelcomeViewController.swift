@@ -8,14 +8,16 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        navigationController?.navigationBar.barStyle = .black
+
     }
 
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+ 
 }
 

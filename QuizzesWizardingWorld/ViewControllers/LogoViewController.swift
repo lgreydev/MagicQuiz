@@ -8,7 +8,7 @@
 import UIKit
 
 class LogoViewController: UIViewController {
-
+    
     // MARK: - Private Properties
     private var imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
@@ -34,22 +34,23 @@ class LogoViewController: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     
     // MARK: - Private Methods
     private func animate() {
-        UIView.animate(withDuration: 1.5) {
-            let size = self.view.frame.size.width * 2
+        UIView.animate(withDuration: 1.7) {
+            let size = self.view.frame.size.width * 2.5
             let diffX = size - self.view.frame.width
             let diffY = self.view.frame.height - size
-
+            
             self.imageView.frame = CGRect(
                 x: -(diffX/2),
                 y: diffY/2,
                 width: size,
                 height: size)
             self.imageView.alpha = 0
-            
         }
     }
-
 }

@@ -90,9 +90,9 @@
 		5E83A001268A218400995C25 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */,
 				5E839FEE268A1DE500995C25 /* WelcomeViewController.swift */,
 				5E83A002268AEBDC00995C25 /* QuizzesViewController.swift */,
-				5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
