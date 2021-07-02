@@ -11,12 +11,17 @@ class ResultViewController: UIViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var backGround: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet weak var contentSV: UIStackView!
     
     
     // MARK: - Public Properties
     var image: UIImage?
     var result: String?
+    var score: Int?
+    var countQuestions: Int?
     
     
     // MARK: - Lifecycle
@@ -35,11 +40,24 @@ class ResultViewController: UIViewController {
     private func animate() {
         self.updateUI()
         UIView.animate(withDuration: 2) {
-            self.resultLabel.alpha = 1
+            self.contentSV.alpha = 1
         }
     }
     
     private func updateUI() {
         resultLabel.text = result
+        if let myScore = score {
+            if let myCount = countQuestions {
+                scoreLabel.text = "\(String(myScore)) / \(String(myCount))"
+            }
+        }
     }
+    
+    
+    
+    @IBAction func actionButton(_ sender: UIButton) {
+        
+    }
+    
+    
 }

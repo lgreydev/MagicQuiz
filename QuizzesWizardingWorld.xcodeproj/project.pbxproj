@@ -20,6 +20,7 @@
 		5EC1C7DC268E084700F6B440 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7DB268E084700F6B440 /* Answer.swift */; };
 		5EC1C7DE268E0A0400F6B440 /* QuizGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7DD268E0A0400F6B440 /* QuizGame.swift */; };
 		5EC1C7E2268F009700F6B440 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E1268F009700F6B440 /* ResultViewController.swift */; };
+		5EC1C7E4268F44BB00F6B440 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E3268F44BB00F6B440 /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5EC1C7DB268E084700F6B440 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		5EC1C7DD268E0A0400F6B440 /* QuizGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGame.swift; sourceTree = "<group>"; };
 		5EC1C7E1268F009700F6B440 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5EC1C7E3268F44BB00F6B440 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				5EC1C7D7268E070400F6B440 /* Quiz.swift */,
 				5EC1C7D9268E081E00F6B440 /* Question.swift */,
 				5EC1C7DB268E084700F6B440 /* Answer.swift */,
+				5EC1C7E3268F44BB00F6B440 /* Results.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				5E83A003268AEBDC00995C25 /* QuizzesViewController.swift in Sources */,
 				5EC1C7E2268F009700F6B440 /* ResultViewController.swift in Sources */,
 				5EC1C7D8268E070400F6B440 /* Quiz.swift in Sources */,
+				5EC1C7E4268F44BB00F6B440 /* Results.swift in Sources */,
 				5EC1C7DA268E081E00F6B440 /* Question.swift in Sources */,
 				5E839FED268A1DE500995C25 /* SceneDelegate.swift in Sources */,
 				5EC1C7DC268E084700F6B440 /* Answer.swift in Sources */,

@@ -10,15 +10,11 @@ import Foundation
 
 class QuizGame {
     
-    private var life: Int = 5
+//    private var life: Int = 5
     private var level: Int = 0
     
     let quizzes = [Quiz.snape]
 
-    
-    
-    
-    
     func currentLevel() -> String {
         switch level {
         case 1: return "Level: 1️⃣"
@@ -27,6 +23,7 @@ class QuizGame {
         }
     }
     
+    /*
     func currentLife() -> String {
         var result = "Life: "
         for _ in 0..<life {
@@ -39,5 +36,14 @@ class QuizGame {
         life -= 1
     }
     
+ */
+ 
+    func result(score: Int, quiz index: Int, question count: Int) -> String {
+        if score > Int(Double(count) / 1.4) {
+            return quizzes[index].result.positive
+        } else {
+            return quizzes[index].result.negative
+        }
+    }
     
 }

@@ -12,6 +12,7 @@ struct Quiz {
     let title: String
     let image: String
     let description: String
+    let result: Results
     let question: [Question]
     let answer: [[Answer]]
     
@@ -19,6 +20,9 @@ struct Quiz {
         title: "How well do you remember Snape's Philosopher's Stone speech?",
         image: "snape",
         description: "The speech that Snape gave in Harry’s first Potions lesson was certainly memorable. But can you recall exactly what he said in the Philosopher’s Stone film? Take our quiz and find out… good luck!",
+        result: Results(
+            positive: "You’ve Slytherin-d to the top spot! Snape would be proud… even if he wouldn't admit it... ",
+            negative: "You clearly don’t appreciate the subtle science and exact art of Snape quizzes!"),
         question: [
             Question(text: "There will be no foolish wand-waving or silly _____ in this class."),
             Question(text: "I don’t expect many of you to appreciate the ______and exact art that is potion making."),

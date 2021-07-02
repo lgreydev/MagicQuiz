@@ -25,8 +25,8 @@ class QuizzesViewController: UIViewController {
     // MARK: - Private Properties
     private var game = QuizGame()
     private var firstIndex = 0
-    private var secondIndex = 0
-    var result = 0
+    private var secondIndex = 7
+    var score = 0
     
     
     // MARK: - Lifecycle
@@ -43,7 +43,10 @@ class QuizzesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultVC = segue.destination as? ResultViewController {
             resultVC.image = UIImage(named: game.quizzes[firstIndex].image)
-            resultVC.result = String(result)
+            let count = game.quizzes[firstIndex].answer.count
+            resultVC.result = game.result(score: score, quiz: firstIndex, question: count)
+            resultVC.score = score
+            resultVC.countQuestions = game.quizzes[firstIndex].answer.count
         }
     }
     
@@ -56,7 +59,7 @@ class QuizzesViewController: UIViewController {
     
     private func updateUI() {
         levelLabel.text = game.currentLevel()
-        lifeLabel.text = game.currentLife()
+        //lifeLabel.text = game.currentLife()
         titleLabel.text = game.quizzes[firstIndex].title
         descriptionLabel.text = game.quizzes[firstIndex].description
         updateProgress()
@@ -109,10 +112,11 @@ class QuizzesViewController: UIViewController {
             sender.backgroundColor = .green
             buttonOff()
             secondIndex += 1
-            result += 1
+            score += 1
+            
+            print(score) // TODO: - delete
         } else {
             sender.backgroundColor = .red
-            game.statusLife()
             buttonOff()
             secondIndex += 1
         }
