@@ -97,6 +97,123 @@ struct Quiz {
                 Answer(text: "Fame", truthOrLie: true),
             ].shuffled()
         ])
+    
+    static let mcgonagall = Quiz(
+        title: "Complete the quote quiz: McGonagall edition",
+        image: "mcgonagall",
+        description: "Minerva McGonagall. Talented witch, inspiring teacher, and wordsmith extraordinaire. Can you finish these famous Professor McGonagall lines? ",
+        result: Results(
+            positive: "",
+            negative: ""),
+        question: [
+            Question(text: "When I call your name, you will put on the hat and sit on the stool to be…"),
+            Question(text: "Potter, this is Oliver Wood. Wood – I’ve found you a…"),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+            Question(text: ""),
+        ],
+        answer: [
+            [
+                Answer(text: "tested", truthOrLie: false),
+                Answer(text: "laughed at", truthOrLie: false),
+                Answer(text: "vanished", truthOrLie: false),
+                Answer(text: "sorted", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "Seeker", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: false),
+                Answer(text: "", truthOrLie: true),
+            ].shuffled(),
+        ])
 }
 
 

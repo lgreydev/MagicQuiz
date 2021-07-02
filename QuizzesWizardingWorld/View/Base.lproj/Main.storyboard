@@ -355,6 +355,7 @@
                                         </state>
                                         <connections>
                                             <action selector="actionButton:" destination="g4E-iK-XjR" eventType="touchUpInside" id="HE0-75-Eau"/>
+                                            <segue destination="6vD-E1-6dC" kind="show" id="Twv-tV-ie0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -385,9 +386,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFr-3A-7eL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.9065420560746" y="73.866090712742988"/>
+            <point key="canvasLocation" x="1922" y="74"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Twv-tV-ie0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="wizarding" width="423.66665649414062" height="916.66668701171875"/>
         <systemColor name="systemBackgroundColor">

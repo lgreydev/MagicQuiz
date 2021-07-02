@@ -24,7 +24,7 @@ class QuizzesViewController: UIViewController {
     
     // MARK: - Private Properties
     private var game = QuizGame()
-    lazy private var firstIndex = game.round
+    private var firstIndex = 0
     private var secondIndex = 0
     var score = 0
     
@@ -32,6 +32,7 @@ class QuizzesViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#line, firstIndex, self.firstIndex)
         backGround.image = UIImage(named: game.quizzes[firstIndex].image)
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { self.animate() }
     }
@@ -48,19 +49,23 @@ class QuizzesViewController: UIViewController {
             resultVC.score = score
             resultVC.countQuestions = game.quizzes[firstIndex].answer.count
             resultVC.nextQuiz = game.nextQuiz
+            
+            
+            resultVC.dataClosure = { [weak self] value in
+            
+            }
         }
     }
     
     
     // MARK: - Private Methods
-    private func animate() {
+    func animate() {
         self.updateUI()
         UIView.animate(withDuration: 2) { self.contentSV.alpha = 1 }
     }
     
     private func updateUI() {
         roundLabel.text = game.currentLevel()
-        //lifeLabel.text = game.currentLife()
         titleLabel.text = game.quizzes[firstIndex].title
         descriptionLabel.text = game.quizzes[firstIndex].description
         updateProgress()
@@ -130,26 +135,3 @@ class QuizzesViewController: UIViewController {
 }
 
 
-//func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    guard segue.identifier == "identifier segue" else { fatalError() }
-//
-//    if segue.destination is DestinationViewController {
-//            let vc = segue.destination as? DestinationViewController
-//            vc?.property = "text"
-//        }
-//
-//    if segue.source is SourceViewController {
-//            let vc = segue.source as? SourceViewController
-//            vc?.property = "text"
-//        }
-//
-//        /// or >>
-//
-//    if let vc = segue.destination as? DestinationViewController {
-//            vc.property = "text"
-//        }
-//
-//    if let vc = segue.destination as? SourceViewController {
-//            vc.property = "text"
-//        }
-//}

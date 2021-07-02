@@ -25,6 +25,12 @@ class ResultViewController: UIViewController {
     var nextQuiz: Bool?
     
     
+    
+    typealias MyClosure = (Int) -> ()
+    var dataClosure: MyClosure?
+    
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +62,13 @@ class ResultViewController: UIViewController {
         
         if let myNextQuiz = nextQuiz {
             myNextQuiz ? resultButton.setTitle("Next Level", for: .normal) : resultButton.setTitle("Restart", for: .normal)
+            dataClosure!(1)
         }
         
     }
     
     
-    
     @IBAction func actionButton(_ sender: UIButton) {
         
     }
-    
-    
 }

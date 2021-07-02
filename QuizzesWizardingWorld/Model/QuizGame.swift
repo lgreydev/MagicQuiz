@@ -14,7 +14,7 @@ class QuizGame {
     var round: Int = 0
     var nextQuiz: Bool = false
     
-    let quizzes = [Quiz.snape]
+    let quizzes = [Quiz.snape, Quiz.mcgonagall]
 
     func currentLevel() -> String {
         switch round {
