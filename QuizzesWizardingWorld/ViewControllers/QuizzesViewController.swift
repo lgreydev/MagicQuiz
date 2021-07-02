@@ -11,7 +11,7 @@ class QuizzesViewController: UIViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var lifeLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backGround: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -24,8 +24,8 @@ class QuizzesViewController: UIViewController {
     
     // MARK: - Private Properties
     private var game = QuizGame()
-    private var firstIndex = 0
-    private var secondIndex = 7
+    lazy private var firstIndex = game.round
+    private var secondIndex = 0
     var score = 0
     
     
@@ -47,6 +47,7 @@ class QuizzesViewController: UIViewController {
             resultVC.result = game.result(score: score, quiz: firstIndex, question: count)
             resultVC.score = score
             resultVC.countQuestions = game.quizzes[firstIndex].answer.count
+            resultVC.nextQuiz = game.nextQuiz
         }
     }
     
@@ -58,7 +59,7 @@ class QuizzesViewController: UIViewController {
     }
     
     private func updateUI() {
-        levelLabel.text = game.currentLevel()
+        roundLabel.text = game.currentLevel()
         //lifeLabel.text = game.currentLife()
         titleLabel.text = game.quizzes[firstIndex].title
         descriptionLabel.text = game.quizzes[firstIndex].description

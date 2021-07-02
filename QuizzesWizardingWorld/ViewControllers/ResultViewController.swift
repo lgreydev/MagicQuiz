@@ -22,6 +22,7 @@ class ResultViewController: UIViewController {
     var result: String?
     var score: Int?
     var countQuestions: Int?
+    var nextQuiz: Bool?
     
     
     // MARK: - Lifecycle
@@ -51,6 +52,12 @@ class ResultViewController: UIViewController {
                 scoreLabel.text = "\(String(myScore)) / \(String(myCount))"
             }
         }
+        
+        
+        if let myNextQuiz = nextQuiz {
+            myNextQuiz ? resultButton.setTitle("Next Level", for: .normal) : resultButton.setTitle("Restart", for: .normal)
+        }
+        
     }
     
     
