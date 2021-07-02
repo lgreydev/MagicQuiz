@@ -17,36 +17,50 @@ class QuizzesViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answersButton: [UIButton]!
+    @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    
     @IBOutlet weak var contentSV: UIStackView!
     
-    var game = QuizGame()
-    var firstIndex = 0
-    var secondIndex = 0
+    
+    // MARK: - Private Properties
+    private var game = QuizGame()
+    private var firstIndex = 0
+    private var secondIndex = 0
+    var result = 0
     
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         backGround.image = UIImage(named: game.quizzes[firstIndex].image)
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) { self.animate() }
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { self.animate() }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultVC = segue.destination as? ResultViewController {
+            resultVC.image = UIImage(named: game.quizzes[firstIndex].image)
+            resultVC.result = String(result)
+        }
+    }
+    
     
     // MARK: - Private Methods
+    private func animate() {
+        self.updateUI()
+        UIView.animate(withDuration: 2) { self.contentSV.alpha = 1 }
+    }
+    
     private func updateUI() {
         levelLabel.text = game.currentLevel()
         lifeLabel.text = game.currentLife()
-        answersButton.forEach { $0.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1) }
         titleLabel.text = game.quizzes[firstIndex].title
         descriptionLabel.text = game.quizzes[firstIndex].description
-        questionLabel.text = game.quizzes[firstIndex].question[secondIndex].text
-        answers()
+        updateProgress()
+        nextQuestion()
     }
     
     private func answers() {
@@ -57,39 +71,80 @@ class QuizzesViewController: UIViewController {
         }
     }
     
-    private func animate() {
-        self.updateUI()
-        UIView.animate(withDuration: 2) {
-            self.contentSV.alpha = 1
+    private func buttonOff() {
+        answersButton.forEach { button in
+            button.isEnabled = false
+        }
+    }
+    
+    private func buttonOn() {
+        answersButton.forEach { button in
+            button.isEnabled = true
+        }
+    }
+    
+    private func updateProgress() {
+        let value = Float(secondIndex) / 10.0
+        progressView.setProgress(value, animated: true)
+        counterLabel.text = "\(secondIndex) / \(game.quizzes[firstIndex].answer.count)"
+    }
+    
+    private func nextQuestion() {
+        if secondIndex ==  game.quizzes[firstIndex].answer.count {
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
+                self.performSegue(withIdentifier: "resultVC", sender: nil)
+            }
+        } else {
+            questionLabel.text = game.quizzes[firstIndex].question[secondIndex].text
+            answersButton.forEach { $0.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1) }
+            answers()
         }
     }
     
     
     // MARK: - IBAction
     @IBAction func actionButton(_ sender: UIButton) {
-        //var answer = [(String, String)]()
+        
         if game.quizzes[firstIndex].answer[secondIndex][sender.tag].truthOrLie == true {
             sender.backgroundColor = .green
+            buttonOff()
+            secondIndex += 1
+            result += 1
         } else {
             sender.backgroundColor = .red
             game.statusLife()
+            buttonOff()
+            secondIndex += 1
         }
-        
-        secondIndex += 1
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.updateUI()
+            self.buttonOn()
         }
-
     }
 }
 
 
-//let emojiArray = ["🥵", "🥶", "😎", "😱", "😡"]
-//let strArray = ["Hot", "Cold", "Good"]
-//var newArray = [(String, String)]()
+//func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    guard segue.identifier == "identifier segue" else { fatalError() }
 //
-//for value in zip(emojiArray, strArray) {
-//    newArray.append(value)
+//    if segue.destination is DestinationViewController {
+//            let vc = segue.destination as? DestinationViewController
+//            vc?.property = "text"
+//        }
+//
+//    if segue.source is SourceViewController {
+//            let vc = segue.source as? SourceViewController
+//            vc?.property = "text"
+//        }
+//
+//        /// or >>
+//
+//    if let vc = segue.destination as? DestinationViewController {
+//            vc.property = "text"
+//        }
+//
+//    if let vc = segue.destination as? SourceViewController {
+//            vc.property = "text"
+//        }
 //}
-// [("🥵", "Hot"), ("🥶", "Cold"), ("😎", "Good")] // Array of Tuple

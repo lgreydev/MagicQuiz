@@ -19,6 +19,7 @@
 		5EC1C7DA268E081E00F6B440 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7D9268E081E00F6B440 /* Question.swift */; };
 		5EC1C7DC268E084700F6B440 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7DB268E084700F6B440 /* Answer.swift */; };
 		5EC1C7DE268E0A0400F6B440 /* QuizGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7DD268E0A0400F6B440 /* QuizGame.swift */; };
+		5EC1C7E2268F009700F6B440 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E1268F009700F6B440 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5EC1C7D9268E081E00F6B440 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5EC1C7DB268E084700F6B440 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		5EC1C7DD268E0A0400F6B440 /* QuizGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGame.swift; sourceTree = "<group>"; };
+		5EC1C7E1268F009700F6B440 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5EAF0B7D268B84FF00D92322 /* LogoViewController.swift */,
 				5E839FEE268A1DE500995C25 /* WelcomeViewController.swift */,
 				5E83A002268AEBDC00995C25 /* QuizzesViewController.swift */,
+				5EC1C7E1268F009700F6B440 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				5EAF0B7E268B84FF00D92322 /* LogoViewController.swift in Sources */,
 				5EC1C7DE268E0A0400F6B440 /* QuizGame.swift in Sources */,
 				5E83A003268AEBDC00995C25 /* QuizzesViewController.swift in Sources */,
+				5EC1C7E2268F009700F6B440 /* ResultViewController.swift in Sources */,
 				5EC1C7D8268E070400F6B440 /* Quiz.swift in Sources */,
 				5EC1C7DA268E081E00F6B440 /* Question.swift in Sources */,
 				5E839FED268A1DE500995C25 /* SceneDelegate.swift in Sources */,
