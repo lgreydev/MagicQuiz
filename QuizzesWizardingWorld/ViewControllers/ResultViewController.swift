@@ -23,12 +23,10 @@ class ResultViewController: UIViewController {
     var score: Int?
     var countQuestions: Int?
     var nextQuiz: Bool?
-    
-    
+    var firstIndex: Int?
     
     typealias MyClosure = (Int) -> ()
     var dataClosure: MyClosure?
-    
     
     
     // MARK: - Lifecycle
@@ -53,22 +51,23 @@ class ResultViewController: UIViewController {
     
     private func updateUI() {
         resultLabel.text = result
+        
         if let myScore = score {
             if let myCount = countQuestions {
                 scoreLabel.text = "\(String(myScore)) / \(String(myCount))"
             }
         }
         
-        
         if let myNextQuiz = nextQuiz {
             myNextQuiz ? resultButton.setTitle("Next Level", for: .normal) : resultButton.setTitle("Restart", for: .normal)
-            dataClosure!(1)
         }
-        
     }
     
     
     @IBAction func actionButton(_ sender: UIButton) {
-        
+        if let myNextQuiz = nextQuiz {
+            myNextQuiz ? dataClosure?(1) : dataClosure?(0)
+            dismiss(animated: true, completion: nil)
+        }
     }
 }

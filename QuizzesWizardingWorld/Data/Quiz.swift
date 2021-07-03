@@ -108,7 +108,7 @@ struct Quiz {
         question: [
             Question(text: "When I call your name, you will put on the hat and sit on the stool to be…"),
             Question(text: "Potter, this is Oliver Wood. Wood – I’ve found you a…"),
-            Question(text: ""),
+            Question(text: "Well, I still say you were lucky, but not many first-years could have taken on a full-grown mountain…"),
             Question(text: ""),
             Question(text: ""),
             Question(text: ""),
@@ -130,16 +130,16 @@ struct Quiz {
                 Answer(text: "sorted", truthOrLie: true),
             ].shuffled(),
             [
-                Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: false),
+                Answer(text: "First Year", truthOrLie: false),
+                Answer(text: "Survivor of the Killing Curs", truthOrLie: false),
+                Answer(text: "Gryffindor", truthOrLie: false),
                 Answer(text: "Seeker", truthOrLie: true),
             ].shuffled(),
             [
-                Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "goat", truthOrLie: false),
+                Answer(text: "dragon", truthOrLie: false),
+                Answer(text: "lion", truthOrLie: false),
+                Answer(text: "troll", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),

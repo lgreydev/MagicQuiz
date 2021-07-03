@@ -328,6 +328,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-Av-rcR">
                                                 <rect key="frame" x="0.0" y="0.0" width="396" height="50"/>
+                                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Uup-8X-yUn"/>
                                                 </constraints>
@@ -355,7 +356,6 @@
                                         </state>
                                         <connections>
                                             <action selector="actionButton:" destination="g4E-iK-XjR" eventType="touchUpInside" id="HE0-75-Eau"/>
-                                            <segue destination="6vD-E1-6dC" kind="show" id="Twv-tV-ie0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -389,9 +389,6 @@
             <point key="canvasLocation" x="1922" y="74"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Twv-tV-ie0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="wizarding" width="423.66665649414062" height="916.66668701171875"/>
         <systemColor name="systemBackgroundColor">

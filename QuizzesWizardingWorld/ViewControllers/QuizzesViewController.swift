@@ -23,17 +23,16 @@ class QuizzesViewController: UIViewController {
     
     
     // MARK: - Private Properties
-    private var game = QuizGame()
-    private var firstIndex = 0
-    private var secondIndex = 0
+    var game = QuizGame()
+    var firstIndex = 0
+    var secondIndex = 0
     var score = 0
     
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#line, firstIndex, self.firstIndex)
-        backGround.image = UIImage(named: game.quizzes[firstIndex].image)
+        updateBackground()
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { self.animate() }
     }
     
@@ -43,29 +42,40 @@ class QuizzesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultVC = segue.destination as? ResultViewController {
+            
             resultVC.image = UIImage(named: game.quizzes[firstIndex].image)
             let count = game.quizzes[firstIndex].answer.count
             resultVC.result = game.result(score: score, quiz: firstIndex, question: count)
             resultVC.score = score
             resultVC.countQuestions = game.quizzes[firstIndex].answer.count
             resultVC.nextQuiz = game.nextQuiz
-            
+            resultVC.firstIndex = firstIndex
             
             resultVC.dataClosure = { [weak self] value in
-            
+                self?.firstIndex += value
+                self?.secondIndex = 0
+                self?.score = 0
+                self?.updateBackground()
+                self?.contentSV.alpha = 0
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { self?.animate() }
             }
         }
     }
     
     
     // MARK: - Private Methods
+    
+    func updateBackground() {
+        backGround.image = UIImage(named: game.quizzes[firstIndex].image)
+    }
+    
     func animate() {
         self.updateUI()
         UIView.animate(withDuration: 2) { self.contentSV.alpha = 1 }
     }
     
     private func updateUI() {
-        roundLabel.text = game.currentLevel()
+        roundLabel.text = game.currentLevel(firstIndex)
         titleLabel.text = game.quizzes[firstIndex].title
         descriptionLabel.text = game.quizzes[firstIndex].description
         updateProgress()
@@ -113,20 +123,16 @@ class QuizzesViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func actionButton(_ sender: UIButton) {
-        
         if game.quizzes[firstIndex].answer[secondIndex][sender.tag].truthOrLie == true {
             sender.backgroundColor = .green
             buttonOff()
             secondIndex += 1
             score += 1
-            
-            print(score) // TODO: - delete
         } else {
             sender.backgroundColor = .red
             buttonOff()
             secondIndex += 1
         }
-        
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.updateUI()
             self.buttonOn()
