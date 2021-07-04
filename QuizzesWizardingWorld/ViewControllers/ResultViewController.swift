@@ -65,7 +65,13 @@ class ResultViewController: UIViewController {
     
     
     @IBAction func actionButton(_ sender: UIButton) {
-        if let myNextQuiz = nextQuiz {
+        
+        print(#line, firstIndex)
+        if firstIndex! > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
+                self.performSegue(withIdentifier: "winnerVC", sender: nil)
+            }
+        } else if let myNextQuiz = nextQuiz {
             myNextQuiz ? dataClosure?(1) : dataClosure?(0)
             dismiss(animated: true, completion: nil)
         }

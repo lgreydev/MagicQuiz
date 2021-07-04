@@ -103,16 +103,17 @@ class QuizzesViewController: UIViewController {
     }
     
     private func updateProgress() {
-        let value = Float(secondIndex) / 10.0
+        let value = Float(secondIndex) / Float(game.quizzes[firstIndex].answer.count)
         progressView.setProgress(value, animated: true)
         counterLabel.text = "\(secondIndex) / \(game.quizzes[firstIndex].answer.count)"
     }
     
     private func nextQuestion() {
         if secondIndex ==  game.quizzes[firstIndex].answer.count {
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
-                self.performSegue(withIdentifier: "resultVC", sender: nil)
-            }
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
+                    self.performSegue(withIdentifier: "resultVC", sender: nil)
+                }
+            
         } else {
             questionLabel.text = game.quizzes[firstIndex].question[secondIndex].text
             answersButton.forEach { $0.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1) }
@@ -133,9 +134,14 @@ class QuizzesViewController: UIViewController {
             buttonOff()
             secondIndex += 1
         }
+        
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.updateUI()
-            self.buttonOn()
+            if self.secondIndex != (self.game.quizzes[self.firstIndex].answer.count) {
+                self.buttonOn()
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) { self.buttonOn() }
+            }
         }
     }
 }

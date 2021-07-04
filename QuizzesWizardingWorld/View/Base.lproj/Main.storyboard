@@ -102,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4O-YH-709">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4O-YH-709">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -382,14 +382,84 @@
                         <outlet property="resultButton" destination="GR8-Md-yde" id="SwY-fw-nKg"/>
                         <outlet property="resultLabel" destination="ZUu-CZ-4GZ" id="swa-OK-Cfk"/>
                         <outlet property="scoreLabel" destination="VU9-Av-rcR" id="5Fo-YI-Ili"/>
+                        <segue destination="OLh-bh-w33" kind="show" identifier="winnerVC" id="i4j-Pf-Zoh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFr-3A-7eL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922" y="74"/>
         </scene>
+        <!--Winner View Controller-->
+        <scene sceneID="W4F-GS-Wyg">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="OLh-bh-w33" customClass="WinnerViewController" customModule="QuizzesWizardingWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJH-PI-J0i">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goblet-of-fire" translatesAutoresizingMaskIntoConstraints="NO" id="kRm-8c-xLA">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-W8-ht5">
+                                <rect key="frame" x="20" y="94" width="388" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuc-PH-1W4">
+                                        <rect key="frame" x="123.33333333333336" y="0.0" width="141.66666666666663" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You know the world of Harry Potter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilf-69-1wM">
+                                        <rect key="frame" x="42" y="68" width="304.33333333333331" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-qY-IB4">
+                                <rect key="frame" x="164" y="792" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IeJ-jL-T0o"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="t7p-zR-Jcu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton:" destination="OLh-bh-w33" eventType="touchUpInside" id="rzD-5K-4Rh"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="RGm-Ei-1iR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g8I-6V-MR3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g8I-6V-MR3" firstAttribute="bottom" secondItem="Iel-qY-IB4" secondAttribute="bottom" constant="50" id="3CE-NJ-hBD"/>
+                            <constraint firstAttribute="bottom" secondItem="kRm-8c-xLA" secondAttribute="bottom" id="9Np-Tf-QMN"/>
+                            <constraint firstItem="Iel-qY-IB4" firstAttribute="centerX" secondItem="KJH-PI-J0i" secondAttribute="centerX" id="O52-7I-Mmx"/>
+                            <constraint firstItem="b4l-W8-ht5" firstAttribute="leading" secondItem="g8I-6V-MR3" secondAttribute="leading" constant="20" id="PQW-09-0j5"/>
+                            <constraint firstItem="b4l-W8-ht5" firstAttribute="top" secondItem="g8I-6V-MR3" secondAttribute="top" constant="50" id="VTd-4r-EAb"/>
+                            <constraint firstItem="kRm-8c-xLA" firstAttribute="trailing" secondItem="g8I-6V-MR3" secondAttribute="trailing" id="a2t-vO-K7t"/>
+                            <constraint firstAttribute="trailing" secondItem="b4l-W8-ht5" secondAttribute="trailing" constant="20" id="cF4-lG-hgc"/>
+                            <constraint firstItem="kRm-8c-xLA" firstAttribute="top" secondItem="KJH-PI-J0i" secondAttribute="top" id="hay-fD-pKx"/>
+                            <constraint firstItem="kRm-8c-xLA" firstAttribute="leading" secondItem="g8I-6V-MR3" secondAttribute="leading" id="lUs-Ad-oCB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L0a-yJ-ESv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjE-QD-FyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913" y="74"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RGm-Ei-1iR"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="goblet-of-fire" width="423.66665649414062" height="916.66668701171875"/>
         <image name="wizarding" width="423.66665649414062" height="916.66668701171875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

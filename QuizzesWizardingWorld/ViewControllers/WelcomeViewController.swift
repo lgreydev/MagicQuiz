@@ -17,6 +17,10 @@ class WelcomeViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+        // Connect a Triggering Object to the Exit Control
+    }
  
 }
 
