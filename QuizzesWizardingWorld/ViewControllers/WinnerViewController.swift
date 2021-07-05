@@ -17,8 +17,4 @@ class WinnerViewController: UIViewController {
         .lightContent
     }
 
-    
-    @IBAction func actionButton(_ sender: UIButton) {
-    }
-    
 }
