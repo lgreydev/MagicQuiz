@@ -24,7 +24,7 @@ class QuizzesViewController: UIViewController {
     
     // MARK: - Private Properties
     var game = QuizGame()
-    var firstIndex = 1 // TODO: - CHANGE
+    var firstIndex = 0 // TODO: - CHANGE
     var secondIndex = 0
     var score = 0
     

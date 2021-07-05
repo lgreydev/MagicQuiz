@@ -11,7 +11,7 @@ import Foundation
 class QuizGame {
     
     var nextQuiz: Bool = false
-    let quizzes = [Quiz.snape, Quiz.mcgonagall, Quiz.magicalObjects]
+    let quizzes = [Quiz.magicalObjects, Quiz.snape, Quiz.mcgonagall, Quiz.deathEaters]
 
     func currentLevel(_ index: Int) -> String {
         switch index {

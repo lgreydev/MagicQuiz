@@ -65,7 +65,7 @@ class ResultViewController: UIViewController {
     
     
     @IBAction func actionButton(_ sender: UIButton) {
-        if firstIndex! > 1 {  // TODO: - CHANGE
+        if firstIndex! > 2 {  // TODO: - CHANGE
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
                 self.performSegue(withIdentifier: "winnerVC", sender: nil)
             }

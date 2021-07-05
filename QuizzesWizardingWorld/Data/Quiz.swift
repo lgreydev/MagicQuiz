@@ -220,10 +220,79 @@ struct Quiz {
         image: "magical-objects",
         description: "Do you know your Resurrection Stones from your Philosopher’s Stones? Or your Sneakoscopes from your Secrecy Sensors? Well, let’s find out in our latest quiz.",
         result: Results(
+            positive: "Did Hagrid tell you the answers beforehand?",
+            negative: "You’re right at the bottom of the Vault with these results"),
+        question: [
+            Question(text: "What colour does a Remembrall glow when you forget something?"),
+            Question(text: "Which of these objects was NOT a Horcrux?"),
+            Question(text: "Which character gave Harry a two-way mirror?"),
+            Question(text: "When picking the students that will attend Hogwarts, that decision is made by an enchanted..."),
+            Question(text: "When playing the giant version of Wizard Chess, what is Ron’s preferred piece?"),
+            Question(text: "Which book is bequeathed to Hermione from Dumbledore’s will?"),
+            Question(text: "What type of jewel is encrusted into the Sword of Gryffindor?"),
+            Question(text: "Which of these is a popular Hogwarts game?")
+        ],
+        answer: [
+            [
+                Answer(text: "Green", truthOrLie: false),
+                Answer(text: "Purple", truthOrLie: false),
+                Answer(text: "Black", truthOrLie: false),
+                Answer(text: "Red", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Hufflepuff's Cup", truthOrLie: false),
+                Answer(text: "Ravenclaw's Diadem", truthOrLie: false),
+                Answer(text: "Slytherin's Locke", truthOrLie: false),
+                Answer(text: "The Sword of Gryffindor", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Remus Lupin", truthOrLie: false),
+                Answer(text: "Albus Dumlbledore", truthOrLie: false),
+                Answer(text: "Molly Weasley", truthOrLie: false),
+                Answer(text: "Sirius Black", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Goblet of Fire", truthOrLie: false),
+                Answer(text: "Sorting Hat", truthOrLie: false),
+                Answer(text: "Piece of parchment", truthOrLie: false),
+                Answer(text: "Quill and book", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Rook", truthOrLie: false),
+                Answer(text: "King", truthOrLie: false),
+                Answer(text: "Bishop", truthOrLie: false),
+                Answer(text: "Knight", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Monster Book of Monsters", truthOrLie: false),
+                Answer(text: "Hogwarts: A History", truthOrLie: false),
+                Answer(text: "Secrets of the Darkest Art", truthOrLie: false),
+                Answer(text: "The Tales of Beedle the Bard", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Diamonds", truthOrLie: false),
+                Answer(text: "Emeralds", truthOrLie: false),
+                Answer(text: "Sapphires", truthOrLie: false),
+                Answer(text: "Rubies", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Jumping Gin Rummy", truthOrLie: false),
+                Answer(text: "Paranoid Poker", truthOrLie: false),
+                Answer(text: "Blow up Blackjack", truthOrLie: false),
+                Answer(text: "Exploding Snap", truthOrLie: true),
+            ].shuffled()
+        ])
+    
+    
+    static let deathEaters = Quiz(
+        title: "The Death Eaters",
+        image: "death-eaters",
+        description: "Do you know your Rookwoods from your Rosiers? Take this quiz to see whether you would have what it takes to join Lord Voldemort’s inner circle.",
+        result: Results(
             positive: "",
             negative: ""),
         question: [
-            Question(text: "What colour does a Remembrall glow when you forget something?"),
+            Question(text: "Where did Harry first see Death Eaters in the flesh?"),
             Question(text: ""),
             Question(text: ""),
             Question(text: ""),
@@ -236,67 +305,66 @@ struct Quiz {
         ],
         answer: [
             [
-                Answer(text: "Green", truthOrLie: false),
-                Answer(text: "Purple", truthOrLie: false),
-                Answer(text: "Black", truthOrLie: false),
-                Answer(text: "Red", truthOrLie: true),
+                Answer(text: "Little Hangleton graveyard", truthOrLie: false),
+                Answer(text: "Godric's Hollow", truthOrLie: false),
+                Answer(text: "Malfoy Manor", truthOrLie: false),
+                Answer(text: "The Quidditch World Cup", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled(),
             [
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
                 Answer(text: "", truthOrLie: false),
-                Answer(text: "", truthOrLie: true),
+                Answer(text: "1", truthOrLie: true),
             ].shuffled()
         ])
-    
 }
 
 
