@@ -2,7 +2,7 @@
 //  LogoViewController.swift
 //  QuizzesWizardingWorld
 //
-//  Created by Sergey Lukaschuk on 29.06.2021.
+//  Created by Sergey Lukaschuk on 29.06.2021. 
 //
 
 import UIKit
