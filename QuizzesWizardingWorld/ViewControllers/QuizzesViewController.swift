@@ -10,7 +10,6 @@ import UIKit
 class QuizzesViewController: UIViewController {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backGround: UIImageView!
@@ -23,10 +22,10 @@ class QuizzesViewController: UIViewController {
     
     
     // MARK: - Private Properties
-    var game = QuizGame()
-    var firstIndex = 0 // TODO: - CHANGE
-    var secondIndex = 0
-    var score = 0
+    private var game = QuizGame() // logic game
+    private var firstIndex = 0 // index of quiz
+    private var secondIndex = 0 // index of question
+    private var score = 0 // counting correct answers
     
     
     // MARK: - Lifecycle
@@ -65,11 +64,11 @@ class QuizzesViewController: UIViewController {
     
     // MARK: - Private Methods
     
-    func updateBackground() {
+    private func updateBackground() {
         backGround.image = UIImage(named: game.quizzes[firstIndex].image)
     }
     
-    func animate() {
+    private func animate() {
         self.updateUI()
         UIView.animate(withDuration: 2) { self.contentSV.alpha = 1 }
     }

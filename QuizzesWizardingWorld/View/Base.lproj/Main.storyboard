@@ -112,13 +112,6 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dVh-xZ-MSN">
                                         <rect key="frame" x="16" y="0.0" width="396" height="20"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Life" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvJ-gz-r13">
-                                                <rect key="frame" x="0.0" y="0.0" width="198" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvl-Hi-Ox4">
                                                 <rect key="frame" x="0.0" y="0.0" width="396" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -129,11 +122,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="7zh-xG-tT6"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="JvJ-gz-r13"/>
-                                            </mask>
-                                        </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EbU-fj-nzt">
                                         <rect key="frame" x="16" y="40" width="396" height="772"/>
@@ -292,7 +280,6 @@
                         <outlet property="contentSV" destination="XNw-Q4-Ezt" id="kk1-Ve-Jeq"/>
                         <outlet property="counterLabel" destination="CcW-6t-07w" id="F2V-L8-nEe"/>
                         <outlet property="descriptionLabel" destination="fUC-Bv-8ms" id="liS-Ll-4y0"/>
-                        <outlet property="lifeLabel" destination="JvJ-gz-r13" id="mrN-ua-nhd"/>
                         <outlet property="progressView" destination="2gE-Sv-MWg" id="CT5-gP-wnz"/>
                         <outlet property="questionLabel" destination="z6f-Ts-iUL" id="LOC-97-C7Q"/>
                         <outlet property="roundLabel" destination="Bvl-Hi-Ox4" id="p4X-9i-Qvf"/>
@@ -456,7 +443,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rZl-vd-Rc8"/>
         <segue reference="RGm-Ei-1iR"/>
     </inferredMetricsTieBreakers>
     <resources>

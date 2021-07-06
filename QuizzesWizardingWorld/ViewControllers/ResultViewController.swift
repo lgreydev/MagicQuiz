@@ -51,21 +51,28 @@ class ResultViewController: UIViewController {
     
     private func updateUI() {
         resultLabel.text = result
-        
+        currentScore()
+        startNextQuiz()
+    }
+    
+    private func currentScore() {
         if let myScore = score {
             if let myCount = countQuestions {
                 scoreLabel.text = "\(String(myScore)) / \(String(myCount))"
             }
         }
-        
+    }
+    
+    private func startNextQuiz() {
         if let myNextQuiz = nextQuiz {
             myNextQuiz ? resultButton.setTitle("Next Level", for: .normal) : resultButton.setTitle("Restart", for: .normal)
         }
     }
     
     
+    // MARK: - IBAction
     @IBAction func actionButton(_ sender: UIButton) {
-        if firstIndex! > 2 {  // TODO: - CHANGE
+        if firstIndex! == 3 && nextQuiz == true {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
                 self.performSegue(withIdentifier: "winnerVC", sender: nil)
             }

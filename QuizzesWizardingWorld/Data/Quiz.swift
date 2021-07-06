@@ -9,6 +9,8 @@ import Foundation
 
 
 struct Quiz {
+    
+    // MARK: - Public Properties
     let title: String
     let image: String
     let description: String
@@ -16,6 +18,10 @@ struct Quiz {
     let question: [Question]
     let answer: [[Answer]]
     
+    
+    // MARK: - Static Properties
+    
+    /// Quiz of Snape
     static let snape = Quiz(
         title: "How well do you remember Snape's Philosopher's Stone speech?",
         image: "snape",
@@ -98,6 +104,7 @@ struct Quiz {
             ].shuffled()
         ])
     
+    /// Quiz of Minerva McGonagall
     static let mcgonagall = Quiz(
         title: "Complete the quote quiz: McGonagall edition",
         image: "mcgonagall",
@@ -215,8 +222,9 @@ struct Quiz {
             ].shuffled(),
         ])
     
+    /// Quiz of The magical objects
     static let magicalObjects = Quiz(
-        title: "The Magical Objects",
+        title: "The magical objects",
         image: "magical-objects",
         description: "Do you know your Resurrection Stones from your Philosopher’s Stones? Or your Sneakoscopes from your Secrecy Sensors? Well, let’s find out in our latest quiz.",
         result: Results(
@@ -283,7 +291,7 @@ struct Quiz {
             ].shuffled()
         ])
     
-    
+    /// Quiz of The Death Eaters
     static let deathEaters = Quiz(
         title: "The Death Eaters",
         image: "death-eaters",

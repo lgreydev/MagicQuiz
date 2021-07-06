@@ -17,6 +17,5 @@ class WelcomeViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
- 
 }
 
