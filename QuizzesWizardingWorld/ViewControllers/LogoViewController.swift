@@ -38,6 +38,7 @@ class LogoViewController: UIViewController {
         .lightContent
     }
     
+    
     // MARK: - Private Methods
     private func animate() {
         UIView.animate(withDuration: 1.7) {
