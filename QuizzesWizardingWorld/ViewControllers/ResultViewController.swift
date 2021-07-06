@@ -72,7 +72,7 @@ class ResultViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func actionButton(_ sender: UIButton) {
-        if firstIndex! > 2 {  // TODO: - CHANGE
+        if firstIndex! == 3 && nextQuiz == true {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
                 self.performSegue(withIdentifier: "winnerVC", sender: nil)
             }

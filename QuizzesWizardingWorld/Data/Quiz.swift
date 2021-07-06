@@ -222,9 +222,9 @@ struct Quiz {
             ].shuffled(),
         ])
     
-    /// Quiz of Minerva McGonagall
+    /// Quiz of The magical objects
     static let magicalObjects = Quiz(
-        title: "Minerva McGonagall",
+        title: "The magical objects",
         image: "magical-objects",
         description: "Do you know your Resurrection Stones from your Philosopher’s Stones? Or your Sneakoscopes from your Secrecy Sensors? Well, let’s find out in our latest quiz.",
         result: Results(
