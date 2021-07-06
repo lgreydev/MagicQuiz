@@ -52,6 +52,7 @@
 		5EC1C7EC2694A5DE00F6B440 /* screenshot-001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-001.png"; sourceTree = "<group>"; };
 		5EC1C7ED2694A5DE00F6B440 /* screenshot-002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-002.png"; sourceTree = "<group>"; };
 		5EC1C7EE2694A5DE00F6B440 /* screenshot-003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-003.png"; sourceTree = "<group>"; };
+		5EC1C7F32694A65A00F6B440 /* video-iPhone12ProMax.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "video-iPhone12ProMax.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				5E839FE8268A1DE500995C25 /* Products */,
 				5E839FE9268A1DE500995C25 /* QuizzesWizardingWorld */,
 				5EC1C7EB2694A5BB00F6B440 /* Screenshots */,
+				5EC1C7F22694A64500F6B440 /* Video */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +157,14 @@
 				5EC1C7EE2694A5DE00F6B440 /* screenshot-003.png */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		5EC1C7F22694A64500F6B440 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5EC1C7F32694A65A00F6B440 /* video-iPhone12ProMax.mp4 */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
