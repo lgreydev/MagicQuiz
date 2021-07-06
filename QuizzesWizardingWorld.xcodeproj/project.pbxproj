@@ -24,6 +24,9 @@
 		5EC1C7E626919C8900F6B440 /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E526919C8800F6B440 /* WinnerViewController.swift */; };
 		5EC1C7E826948A9600F6B440 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E726948A9500F6B440 /* .gitignore */; };
 		5EC1C7EA26948AD000F6B440 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1C7E926948AD000F6B440 /* README.md */; };
+		5EC1C7EF2694A5DE00F6B440 /* screenshot-001.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1C7EC2694A5DE00F6B440 /* screenshot-001.png */; };
+		5EC1C7F02694A5DE00F6B440 /* screenshot-002.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1C7ED2694A5DE00F6B440 /* screenshot-002.png */; };
+		5EC1C7F12694A5DE00F6B440 /* screenshot-003.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1C7EE2694A5DE00F6B440 /* screenshot-003.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		5EC1C7E526919C8800F6B440 /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 		5EC1C7E726948A9500F6B440 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5EC1C7E926948AD000F6B440 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5EC1C7EC2694A5DE00F6B440 /* screenshot-001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-001.png"; sourceTree = "<group>"; };
+		5EC1C7ED2694A5DE00F6B440 /* screenshot-002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-002.png"; sourceTree = "<group>"; };
+		5EC1C7EE2694A5DE00F6B440 /* screenshot-003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-003.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,11 @@
 		5E839FDE268A1DE500995C25 = {
 			isa = PBXGroup;
 			children = (
-				5EC1C7E926948AD000F6B440 /* README.md */,
 				5EC1C7E726948A9500F6B440 /* .gitignore */,
-				5E839FE9268A1DE500995C25 /* QuizzesWizardingWorld */,
+				5EC1C7E926948AD000F6B440 /* README.md */,
 				5E839FE8268A1DE500995C25 /* Products */,
+				5E839FE9268A1DE500995C25 /* QuizzesWizardingWorld */,
+				5EC1C7EB2694A5BB00F6B440 /* Screenshots */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5EC1C7EB2694A5BB00F6B440 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				5EC1C7EC2694A5DE00F6B440 /* screenshot-001.png */,
+				5EC1C7ED2694A5DE00F6B440 /* screenshot-002.png */,
+				5EC1C7EE2694A5DE00F6B440 /* screenshot-003.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,8 +217,11 @@
 				5EC1C7E826948A9600F6B440 /* .gitignore in Resources */,
 				5E839FF7268A1DE800995C25 /* LaunchScreen.storyboard in Resources */,
 				5EC1C7EA26948AD000F6B440 /* README.md in Resources */,
+				5EC1C7F12694A5DE00F6B440 /* screenshot-003.png in Resources */,
 				5E839FF4268A1DE800995C25 /* Assets.xcassets in Resources */,
 				5E839FF2268A1DE500995C25 /* Main.storyboard in Resources */,
+				5EC1C7EF2694A5DE00F6B440 /* screenshot-001.png in Resources */,
+				5EC1C7F02694A5DE00F6B440 /* screenshot-002.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
