@@ -10,7 +10,7 @@ import Foundation
 
 class QuizGame {
     
-    var nextQuiz: Bool = false
+    private(set) var nextQuiz: Bool = false
     let quizzes = [Quiz.magicalObjects, Quiz.snape, Quiz.mcgonagall, Quiz.deathEaters]
 
     func currentLevel(_ index: Int) -> String {

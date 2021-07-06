@@ -289,8 +289,8 @@ struct Quiz {
         image: "death-eaters",
         description: "Do you know your Rookwoods from your Rosiers? Take this quiz to see whether you would have what it takes to join Lord Voldemort’s inner circle.",
         result: Results(
-            positive: "",
-            negative: ""),
+            positive: "Great score – you would fit right in with the Dark Lord’s followers...",
+            negative: "Sorry, you just wouldn’t be Death Eater material with this score."),
         question: [
             Question(text: "Where did Harry first see Death Eaters in the flesh?"),
             Question(text: "Where on the body is the Dark Mark burned into a Death Eater’s skin?"),
@@ -301,7 +301,12 @@ struct Quiz {
             Question(text: "What did Bellatrix Lestrange say the Dark Lord called her?"),
             Question(text: "What colour is a Death Eater’s Dark Mark when inactive?"),
             Question(text: "What position did the Imperiused Pius Thicknesse hold once the Death Eaters had infiltrated the Ministry of Magic?"),
-            Question(text: "Why don’t the Death Eaters attack Harry when they first confront him in the Department of Mysteries?")
+            Question(text: "Why don’t the Death Eaters attack Harry when they first confront him in the Department of Mysteries?"),
+            Question(text: "Which of Voldemort’s Death Eaters impersonates the Auror, Mad-Eye Moody in Harry’s fourth year?"),
+            Question(text: "Who kills Bellatrix Lestrange during the Battle of Hogwarts?"),
+            Question(text: "Why does Neville Longbottom react so badly to Bellatrix Lestrange?"),
+            Question(text: "Which Death Eater removes George’s ear with a Sectumsempra spell?"),
+            Question(text: "When Harry leaves Number 4 Privet Drive for the last time, how do the Death Eaters know he is the real Harry Potter?"),
         ],
         answer: [
             [
@@ -363,7 +368,40 @@ struct Quiz {
                 Answer(text: "Voldemort told them not to", truthOrLie: false),
                 Answer(text: "Harry has already been disarmed", truthOrLie: false),
                 Answer(text: "He’s holding the Prophecy", truthOrLie: true),
-            ].shuffled()
+            ].shuffled(),
+            [
+                Answer(text: "Antonin Dolohov", truthOrLie: false),
+                Answer(text: "Evan Rosier", truthOrLie: false),
+                Answer(text: "Alecto Carrow", truthOrLie: false),
+                Answer(text: "Barty Crouch Jr", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Harry Potter", truthOrLie: false),
+                Answer(text: "Nymphadora Tonks", truthOrLie: false),
+                Answer(text: "Remus Lupin", truthOrLie: false),
+                Answer(text: "Molly Weasley", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "She had his parents sent to Azkaban", truthOrLie: false),
+                Answer(text: "She killed his parents", truthOrLie: false),
+                Answer(text: "She used the Imperius Curse on his parents", truthOrLie: false),
+                Answer(text: "She used the Cruciatus curse on his parents", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Amycus Carrow", truthOrLie: false),
+                Answer(text: "Goyle Senior", truthOrLie: false),
+                Answer(text: "Crabbe Senior", truthOrLie: false),
+                Answer(text: "Severus Snape", truthOrLie: true),
+            ].shuffled(),
+            [
+                Answer(text: "Stan Shunpike recognises him", truthOrLie: false),
+                Answer(text: "His lightening scar", truthOrLie: false),
+                Answer(text: "They have information hell be with Hagrid", truthOrLie: false),
+                Answer(text: "He uses Expelliamus", truthOrLie: true),
+            ].shuffled(),
+
+
+
         ])
 }
 
