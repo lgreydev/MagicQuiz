@@ -399,9 +399,6 @@ struct Quiz {
                 Answer(text: "They have information hell be with Hagrid", truthOrLie: false),
                 Answer(text: "He uses Expelliamus", truthOrLie: true),
             ].shuffled(),
-
-
-
         ])
 }
 
